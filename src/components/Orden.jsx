@@ -4,18 +4,15 @@
 //
 // Props: decide tú cuáles necesita y escríbelas aquí.
 //        (Pista: la orden, el total, los mensajes de error y una función por acción.)
-<<<<<<< HEAD
 export default function Orden({ orden, total, errores = [], onQuitar, onConfirmar }) {
   const vacia = orden.items.length === 0
 
-=======
 export default function Orden({ orden }) {
->>>>>>> 1c1b826609b757a7f67d217ac314a7a5c22c75e1
+
   return (
     <section aria-label="Orden">
       <h2>Orden</h2>
       {/* TODO HU-02 · HU-03 · HU-04 */}
-<<<<<<< HEAD
       <p>
         Mesa: <strong>{orden.mesa}</strong>
       </p>
@@ -32,35 +29,20 @@ export default function Orden({ orden }) {
           ))}
         </ul>
       )}
-    </section>
-  )
-}
+      <p>
+        Total: <strong>${total}</strong>
+      </p>
 
-export default function Menu({ menu, onAgregar }) {
-  const categorias = [...new Set(menu.map((p) => p.categoria))]
-  return (
-    <section aria-label="Menú">
-      <h2>Menú</h2>
-      {categorias.map((categoria) => (
-        <div key={categoria}>
-          <h3>{categoria}</h3>
-          {menu
-            .filter((p) => p.categoria === categoria)
-            .map((p) => {
-              const agotado = p.disponible === false
-              return (
-                <article key={p.id} aria-label={p.nombre}>
-                  <strong>{p.nombre}</strong> <span>${p.precio}</span>{' '}
-                  <button disabled={agotado} onClick={() => onAgregar(p)}>
-                    {agotado ? 'Agotado' : 'Agregar'}
-                  </button>
-                </article>
-              )
-            })}
+      {errores.length > 0 && (
+        <div role="alert">
+          {errores.map((mensaje) => (
+            <p key={mensaje}>{mensaje}</p>
+          ))}
         </div>
-      ))}
-=======
->>>>>>> 1c1b826609b757a7f67d217ac314a7a5c22c75e1
+      )}
+      <button disabled={vacia} onClick={onConfirmar}>
+        Confirmar orden
+      </button>
     </section>
   )
 }

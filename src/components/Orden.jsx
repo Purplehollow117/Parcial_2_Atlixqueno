@@ -7,8 +7,6 @@
 export default function Orden({ orden, total, errores = [], onQuitar, onConfirmar }) {
   const vacia = orden.items.length === 0
 
-export default function Orden({ orden }) {
-
   return (
     <section aria-label="Orden">
       <h2>Orden</h2>
@@ -17,7 +15,7 @@ export default function Orden({ orden }) {
         Mesa: <strong>{orden.mesa}</strong>
       </p>
       {vacia ? (
-        <p>Aún hay platillos en la orden</p>
+        <p>Aún no hay platillos en la orden</p>
       ):(
         <ul>
           {orden.items.map((item) => (

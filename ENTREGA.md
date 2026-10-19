@@ -26,7 +26,16 @@ _(Si el diseño no resolvía algo y tú decidiste, escríbelo aquí. Si no hubo,
 Marca **una** con `[x]`:
 
 - [ ] **No utilicé IA generativa** en este examen, incluido el autocompletado del editor.
-- [ ] **Sí utilicé IA generativa.**
-  - Herramienta:
-  - Qué le pedí:
+- [X] **Sí utilicé IA generativa.**
+  - Herramienta: Claude
+  - Qué le pedí: Me ayudara a ver donde me faltaba ; del archivo orden.js  "[PARSE_ERROR] Expected a semicolon or an implicit semicolon after a statement, but found none
+    ╭─[ src/logic/orden.js:55:15 ]
+    │
+ 55 │   return orden {
+    │               │ 
+    │               ╰─ 
+    │ 
+    │ Help: Try inserting a semicolon here"
+
   - Qué acepté, qué rechacé y por qué:
+  Acepte que si lo perdi de vista el ;

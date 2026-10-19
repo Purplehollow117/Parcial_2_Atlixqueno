@@ -52,13 +52,14 @@ export function agregarPlatillo(orden, platillo) {
       ),
     }
   }
-  return orden {
+
+  return {
     ...orden,
     items: [
       ...orden.items,
       {
         id: platillo.id,
-        nombre: platillo.id, 
+        nombre: platillo.nombre,
         precio: platillo.precio,
         cantidad: 1,
         nota: '',
@@ -66,7 +67,6 @@ export function agregarPlatillo(orden, platillo) {
     ],
   }
 }
-
 // HU-03
 export function calcularTotal(orden) {
 
@@ -107,7 +107,14 @@ export function validarOrden(orden) {
 
 // HU-05
 export function cambiarCantidad(orden, id, cantidad) {
-  // TODO
+  if (cantidad <=0) {
+    return quitarPlatillo(orden, id)
+
+  }
+  let cantidadFinal = cantidad
+  if (cantidad > MAX_POR_PLATILLO) {
+    cantidadFinal
+  }
   return orden
 }
 

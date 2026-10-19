@@ -7,11 +7,17 @@
 
 ## Datos del alumno
 
+<<<<<<< HEAD
 > **Lo primero que haces:** reemplaza `Javier Atlixqueño Barcenas` y `202736` con tus datos, haz commit y push.
 > Este bloque es la portada de tu examen.
 
 - **Nombre:** NOMBRE
 - **Matrícula:** MATRICULA
+=======
+
+- **Nombre:** Javier Atlixqueño Barcenas
+- **Matrícula:** 202736
+>>>>>>> 1c1b826609b757a7f67d217ac314a7a5c22c75e1
 
 ---
 

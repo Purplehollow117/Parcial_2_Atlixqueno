@@ -4,13 +4,18 @@
 //
 // Props: decide tú cuáles necesita y escríbelas aquí.
 //        (Pista: la orden, el total, los mensajes de error y una función por acción.)
+<<<<<<< HEAD
 export default function Orden({ orden, total, errores = [], onQuitar, onConfirmar }) {
   const vacia = orden.items.length === 0
 
+=======
+export default function Orden({ orden }) {
+>>>>>>> 1c1b826609b757a7f67d217ac314a7a5c22c75e1
   return (
     <section aria-label="Orden">
       <h2>Orden</h2>
       {/* TODO HU-02 · HU-03 · HU-04 */}
+<<<<<<< HEAD
       <p>
         Mesa: <strong>{orden.mesa}</strong>
       </p>
@@ -54,6 +59,8 @@ export default function Menu({ menu, onAgregar }) {
             })}
         </div>
       ))}
+=======
+>>>>>>> 1c1b826609b757a7f67d217ac314a7a5c22c75e1
     </section>
   )
 }
